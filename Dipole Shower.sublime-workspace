@@ -1,0 +1,1717 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tED",
+				"tEDiffVecOut"
+			],
+			[
+				"tEd",
+				"tEDiffVector"
+			],
+			[
+				"tE",
+				"tEdiff"
+			],
+			[
+				"tV",
+				"tEDiffVector"
+			],
+			[
+				"four",
+				"fourVector"
+			],
+			[
+				"fix",
+				"fix_energy_difference"
+			],
+			[
+				"get_code",
+				"get_code_from_name"
+			],
+			[
+				"particle",
+				"particleData"
+			],
+			[
+				"__nu",
+				"__numGluonsSplit"
+			],
+			[
+				"aser",
+				"assertions"
+			],
+			[
+				"maxPp",
+				"__maxPperpSquared"
+			],
+			[
+				"inverse_b",
+				"inverse_boost_rotate"
+			],
+			[
+				"out",
+				"output"
+			],
+			[
+				"__log",
+				"__loggedCodes"
+			],
+			[
+				"tZ",
+				"tZBosonMassSquared"
+			],
+			[
+				"tL",
+				"tLogger1"
+			],
+			[
+				"ex",
+				"expectedAlphaS"
+			],
+			[
+				"created",
+				"createdQuarks"
+			],
+			[
+				"get",
+				"get_quarks_theta"
+			],
+			[
+				"test",
+				"testQuarkCodes"
+			],
+			[
+				"tes",
+				"testQuarkCodes"
+			],
+			[
+				"cosThe",
+				"cosTheta"
+			],
+			[
+				"testI",
+				"numTestIts"
+			],
+			[
+				"get_quar",
+				"get_quark_weights"
+			],
+			[
+				"part",
+				"particleData"
+			],
+			[
+				"pos",
+				"posQuarkCodes"
+			],
+			[
+				"quarkC",
+				"quarkCodes"
+			],
+			[
+				"prod",
+				"produce_electron_pair"
+			],
+			[
+				"par",
+				"particleCode"
+			],
+			[
+				"__cos",
+				"__cosThetai"
+			],
+			[
+				"__code",
+				"__codei"
+			],
+			[
+				"not",
+				"notSelected"
+			],
+			[
+				"fermio",
+				"fermionCode"
+			],
+			[
+				"get_qu",
+				"get_quarks_theta"
+			],
+			[
+				"nu",
+				"numberPerBin"
+			],
+			[
+				"cos",
+				"cosThetasHists"
+			],
+			[
+				"number",
+				"numberPerBin"
+			],
+			[
+				"co",
+				"cosThetasHists"
+			],
+			[
+				"cosTh",
+				"cosThetaRange"
+			],
+			[
+				"term",
+				"term2s"
+			],
+			[
+				"allC",
+				"allCosThetaBins"
+			],
+			[
+				"costT",
+				"cosThetaRange"
+			],
+			[
+				"one",
+				"oneLoopAlphaEM"
+			],
+			[
+				"gluon",
+				"gluonSplitCounter"
+			],
+			[
+				"__photo",
+				"__photonList"
+			],
+			[
+				"__prd",
+				"__producedPhoton"
+			],
+			[
+				"upd",
+				"update_dipoles_p_prod"
+			],
+			[
+				"__chain",
+				"__chainPart2"
+			],
+			[
+				"__ne",
+				"__newChain2"
+			],
+			[
+				"__new",
+				"__newChain1"
+			],
+			[
+				"__ordere",
+				"__orderedList1"
+			],
+			[
+				"__nex",
+				"__nextProcessCode"
+			],
+			[
+				"__next",
+				"__nextPperpSquared"
+			],
+			[
+				"chain",
+				"__chainList"
+			],
+			[
+				"set",
+				"set_colour"
+			],
+			[
+				"__qC",
+				"__qCode0"
+			],
+			[
+				"__q",
+				"__qCode1"
+			],
+			[
+				"active",
+				"active_q_codes"
+			],
+			[
+				"get_rand",
+				"get_weighted_random_quark"
+			],
+			[
+				"quark",
+				"quarkPairs"
+			],
+			[
+				"qua",
+				"quarkCodes"
+			],
+			[
+				"qu",
+				"quarkCodes"
+			],
+			[
+				"__pr",
+				"__processCode"
+			],
+			[
+				"__e",
+				"__expectedQCodes"
+			],
+			[
+				"parti",
+				"particle2"
+			],
+			[
+				"__dif",
+				"__difCrossSecId"
+			],
+			[
+				"dif",
+				"difCrossSecIds"
+			],
+			[
+				"sum",
+				"sum_cross_sections"
+			],
+			[
+				"proces",
+				"processCodesList"
+			],
+			[
+				"Pperp",
+				"PperpSquared"
+			],
+			[
+				"value",
+				"valueIn"
+			],
+			[
+				"__charge",
+				"__charge1"
+			],
+			[
+				"code",
+				"code1"
+			],
+			[
+				"__alp",
+				"__alphaSMax"
+			],
+			[
+				"alphaEM",
+				"current_alphaEM"
+			],
+			[
+				"alph",
+				"alphaS"
+			],
+			[
+				"__a",
+				"__alphaSMax"
+			],
+			[
+				"cross",
+				"crossSectionId"
+			],
+			[
+				"alpha",
+				"alphaEM"
+			],
+			[
+				"P",
+				"Pperpsquared"
+			],
+			[
+				"alp",
+				"alphaSNow"
+			],
+			[
+				"calc",
+				"calculate_x1"
+			],
+			[
+				"__alph",
+				"__alphaSNow"
+			],
+			[
+				"strong",
+				"strongCoupling"
+			],
+			[
+				"Pp",
+				"PperpSquared"
+			],
+			[
+				"Pper",
+				"PperpSquared"
+			],
+			[
+				"testX",
+				"testX1"
+			],
+			[
+				"gluo",
+				"gluon_splitting_on"
+			],
+			[
+				"pp",
+				"PperpSquaredMax"
+			],
+			[
+				"all",
+				"all_are_numbers"
+			],
+			[
+				"solve",
+				"solve_case_group_0"
+			],
+			[
+				"so",
+				"solve_case_group_1"
+			],
+			[
+				"__ex",
+				"__expectedCodes"
+			],
+			[
+				"assert",
+				"assertions"
+			],
+			[
+				"testNf",
+				"testNfQRange"
+			],
+			[
+				"tesNf",
+				"testNfQRange"
+			],
+			[
+				"LHEF",
+				"LHEF_DS_number_decimal_places"
+			],
+			[
+				"divi",
+				"division_number_decimal_places"
+			],
+			[
+				"numb",
+				"number_decimal_places"
+			],
+			[
+				"__nC",
+				"__nC"
+			],
+			[
+				"__so",
+				"__sortedListOfParticles"
+			],
+			[
+				"__mum",
+				"__mum1"
+			],
+			[
+				"calc_x",
+				"calculate_x1"
+			],
+			[
+				"da",
+				"dataLogger"
+			],
+			[
+				"ra",
+				"ratio2s"
+			],
+			[
+				"rati",
+				"ratio1s"
+			],
+			[
+				"ratio",
+				"ratio2"
+			],
+			[
+				"plot",
+				"plot_energy_ratios"
+			],
+			[
+				"num",
+				"numberBins"
+			],
+			[
+				"cosT",
+				"cosThetaRange"
+			],
+			[
+				"__co",
+				"__cosThetai"
+			],
+			[
+				"theta",
+				"thetaFValuesSum"
+			],
+			[
+				"__the",
+				"__thetaMin"
+			],
+			[
+				"ca",
+				"calc_G_for_theta"
+			],
+			[
+				"__theta",
+				"__thetai"
+			],
+			[
+				"calc_f",
+				"calc_f_for_theta"
+			],
+			[
+				"cro",
+				"fermion_cross_section_dtheta"
+			],
+			[
+				"ferm",
+				"fermionCode"
+			],
+			[
+				"G",
+				"G_for_theta"
+			],
+			[
+				"inv",
+				"inverse_G_for_theta"
+			],
+			[
+				"__",
+				"__prefactor1"
+			],
+			[
+				"pref",
+				"prefactors"
+			],
+			[
+				"fermi",
+				"fermion_cross_section_dtheta"
+			],
+			[
+				"rea",
+				"realChis"
+			],
+			[
+				"testS",
+				"testS123s"
+			],
+			[
+				"real",
+				"real_chi"
+			],
+			[
+				"allThet",
+				"allThetaProbs"
+			],
+			[
+				"hist",
+				"histsTotal"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Templates/LHEF_ME_Template.lhe",
+			"settings":
+			{
+				"buffer_size": 795,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "MEs.py",
+			"settings":
+			{
+				"buffer_size": 13611,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "DSs.py",
+			"settings":
+			{
+				"buffer_size": 7264,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/showers.py",
+			"settings":
+			{
+				"buffer_size": 10517,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/resultsContainers.py",
+			"settings":
+			{
+				"buffer_size": 13263,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/LHEFHandlers.py",
+			"settings":
+			{
+				"buffer_size": 30593,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/chains.py",
+			"settings":
+			{
+				"buffer_size": 34398,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/quarkPairs.py",
+			"settings":
+			{
+				"buffer_size": 22467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/dipoles.py",
+			"settings":
+			{
+				"buffer_size": 17323,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/sudakovs.py",
+			"settings":
+			{
+				"buffer_size": 28722,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/kinematics.py",
+			"settings":
+			{
+				"buffer_size": 30649,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/lorentz.py",
+			"settings":
+			{
+				"buffer_size": 41382,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/runningCouplings.py",
+			"settings":
+			{
+				"buffer_size": 36727,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/particles.py",
+			"settings":
+			{
+				"buffer_size": 40212,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Tools/fourVectors.py",
+			"settings":
+			{
+				"buffer_size": 22347,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/particleData.py",
+			"settings":
+			{
+				"buffer_size": 20662,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/dataLoggers.py",
+			"settings":
+			{
+				"buffer_size": 3457,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/counters.py",
+			"settings":
+			{
+				"buffer_size": 5425,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/precision.py",
+			"settings":
+			{
+				"buffer_size": 6679,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/constants.py",
+			"settings":
+			{
+				"buffer_size": 13405,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tools/assertions.py",
+			"settings":
+			{
+				"buffer_size": 8740,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 265.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/ME_DSs/11.04.16/qqBar_100_DSat14.01.35.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/ME_DSs/11.04.16/qqBar_100000_DSat14.26.23.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Tools/precision.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/ME_DSs/11.04.16/gluonsAndPhotons_1000.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/09.04.16/qqBar_10000MEs_at22.36.36.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/08.04.16/qqBar_10000_DSat11.33.30.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/08.04.16/qqBar_1000_DSat11.56.17.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/08.04.16/qqBar_10000_DSat11.19.52.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/07.04.16/qqBar_1000_DSat18.59.33.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/07.04.16/qqBar_1000_DSat19.23.57.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/07.04.16/qqBar_1000MEs_at19.23.46.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/07.04.16/qqBar_1000_DSat19.10.00.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/07.04.16/qqBar_1000MEs_at19.09.48.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/07.04.16/qqBar_1000MEs_at18.48.17.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/07.04.16/qqBar_10000_DSat17.45.05.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/07.04.16/qqBar_100_DSat14.00.48.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/07.04.16/qqBar_10000_DSat00.14.08.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/06.04.16/qqBar_100_DSat16.30.46.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Tools/sudakovs.py",
+		"/C/Users/Daniel/Documents/University/DUFFC/Membership Cards/create_membership_cards.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Errors/qqBar_1_DSat16.44.37.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Errors/pythiaSettingMassError.txt",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/PYTHIA/Results/Test1/DSs/qqBar_1_DSat16.44.37.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/06.03.16/qqBar_100MEs_at19.04.25.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/06.03.16/qqBar_100_DSat19.04.35.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/06.03.16/qqBar_10000MEs_at19.07.36.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/04.03.16/qqBar_10000_DSat19.00.31.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/04.03.16/qqBar_10000_DSat18.39.54.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/qqBar_100_DSat11.56.19.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/main43PyShower.cmnd",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/main43MEs.cmnd",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/02.03.16/qqBar_100_DSat15.45.09.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Tools/assertions.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/25.02.16/qqBar_1000_DSat15.16.29.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/25.02.16/qqBar_1000MEs_at15.14.31.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Tools/sudakov.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Tools/gProdSudakov.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Tools/gSplitSudakov.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/25.02.16/qqBar_100MEs_at16.44.12.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/24.02.16/qqBar_100_DSat10.55.25.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/22.02.16/qqBar_1000_DSat23.05.39.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Old/MEs/qqBarMEsTest.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Old/old_MEs.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Examples/Holger/belle.lhe",
+		"/C/Users/Daniel/Desktop/qqBarMEsTest.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/PYTHIA/pythia8215/examples/main43.cmnd",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/22.02.16/qqBar_1000MEs_at23.03.41.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/22.02.16/qqBar_10000_DSat17.59.49.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/22.02.16/qqBar_100_DSat17.57.04.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/22.02.16/qqBar_100_DSat17.55.44.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/22.02.16/qqBar_10_DSat17.50.21.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/22.02.16/qqBar_10MEs_at17.46.03.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/22.02.16/qqBar_100_DSat16.40.43.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/22.02.16/qqBar_1000_DSat16.37.01.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/22.02.16/qqBar_10000_DSat15.59.06.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/22.02.16/qqBar_10000_DSat13.03.48.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/22.02.16/qqBar_10000MEs_at15.56.04.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/22.02.16/qqBar_10000MEs_at13.01.21.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Examples/Ryan/PDG_ID.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/20.02.16/qqBar_2200000MEs_at23.08.13.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/20.02.16/qqBar_100_DSat19.32.14.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/20.02.16/qqBar_1000MEs_at18.43.32.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/20.02.16/qqBar_100MEs_at19.30.48.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Templates/LHEF_ME_Template.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/20.02.16/MEs/20.02.16/qqBar_100_DSat18.37.55.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/20.02.16/qqBar_10000MEs_at17.59.31.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Other/pyperclip-1.5.26/docs/introduction.rst",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/controllers.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/19.02.2016/DS_08.43.58on19.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/19.02.2016/qqBarMEs_15.59.30on19.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Other/pyperclip-1.5.26/setup.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Other/pyperclip-1.5.26/pyperclip-1.5.26/docs/introduction.rst",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/belle.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/19.02.2016/DS_02.12.08on19.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/18.02.2016/DS_23.52.10on18.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/18.02.2016/qqBarMEs_23.48.40on18.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/18.02.2016/qqBarMEs_23.40.50on18.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/18.02.2016/qqBarMEs_23.39.25on18.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Templates/LHEF_ME_template.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/18.02.2016/17.41.24on18.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/MEs/qqBarMEsTest.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Events/qqBarMEsTest.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Events/belle.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/17.43.03on17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/18.02.2016/Events/qqBarMEsTest.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/PYTHIA/8.215/README",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/PYTHIA/8.215/examples/main11.cc",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/PYTHIA/8.215/examples/ttbar.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/17.39.43on17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/17.36.01on17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/17.06.55on17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/16.40.51on17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/11.04.15on17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/02.37.20on17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/02.33AM.on.17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/02.24AM.on.17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/02.13AM.on.17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/02.10AM.on.17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/02.00AM.on.17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/01.52AM.on.17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/01.38AM.on.17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/1224AMon17February2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Results/17.02.2016/12.47.AM.on.17.02.2016.lhe",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Extra/solveFourLoopAlphaS.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Extra/kPerpVsPperp2.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Old/old_kinematics2.py",
+		"/C/users/daniel/appdata/local/temp/sublime-sftp-browse-1449705826/freefallClub/home/hudson/misc/dds8ff/public_html/membershipCards/js/membershipCardsJavascript.js",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Tools/solveFourLoopAlphaS.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Old/old_solveStrongCoupling.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Extra/QEDconstants.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Tools/solveStrongCoupling.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Tools/particle.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Tools/QEDconstants.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Old/old_strongCoupling3.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Old/old_strongCoupling2.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Old/old_strongCoupling.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Extra/testRandRange.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Tools/assertions.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Tools/constants.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Tools/precision.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Tools/particleData.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Tools/fourVectors.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Tools/particle.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Tools/strongCoupling.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Tools/lorentz.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Extra/question1.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/From Krauss/Tools/Lorentz.py",
+		"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Other/PDG_ID.py"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\Daniel\\Documents\\University\\Level 4\\Project\\Code\\Current\\Tools",
+			"C:\\Users\\Daniel\\Documents\\University\\Level 4\\Project\\Code\\Current"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"22	",
+			"20	",
+			"testY",
+			"checkE3",
+			"checkE2",
+			"checkE1",
+			"check9",
+			"check8",
+			"check7",
+			"expected9",
+			"expected8",
+			"expected7",
+			"check6",
+			"check5",
+			"check4",
+			"expected6",
+			"expected5",
+			"expected4",
+			"check3",
+			"check2",
+			"check1",
+			"expected3",
+			"expected2",
+			"expected1",
+			"averageTheta",
+			"sumTheta",
+			"averagePhi",
+			"iRange",
+			"sumPhi",
+			"differences",
+			"sums",
+			"rangeMultiplier",
+			"shouldBe",
+			"result",
+			"cE",
+			"kPerp2",
+			"kPerp1",
+			"expectedKPerp",
+			"expectedKPerpSquared",
+			"expectedE3",
+			"expectedE2",
+			"expectedE1",
+			"testP3After",
+			"testP2After",
+			"testP1After",
+			"testY2",
+			"testX3",
+			"testX2",
+			"calculate_tX3",
+			"calculate_tX2",
+			"calculate_tX1",
+			"testX1",
+			"testPperp",
+			"testPperpSquared",
+			"testE",
+			"testP3Before",
+			"testP1Before",
+			"rotation1",
+			"testP2NotRotated",
+			"testP1NotRotated",
+			"boost1",
+			"testCOM",
+			"expectedScd",
+			"expectedSab",
+			"x0",
+			"x3",
+			"x2",
+			"x1",
+			"testFourVector",
+			"testVector2",
+			"testVector1",
+			"testFourVectors",
+			"testS123",
+			".\n",
+			"fix_energy_difference",
+			"eV21",
+			"eV11",
+			"eV20",
+			"eV10",
+			"condition4",
+			"condition3",
+			"tTogethetRV2Massless",
+			"tTogethetRV1Massless",
+			"condition2",
+			"condition1",
+			"test5",
+			"test4",
+			"test3",
+			"rV2",
+			"rV1",
+			"testRotate1",
+			"and successful",
+			"test2",
+			"test1",
+			"sumResult",
+			"testBoost2",
+			"count",
+			"expected",
+			"if successful",
+			"successful =",
+			"cE",
+			"testSpacelike",
+			"testBoostAndRotate1",
+			"testBoostAndRotate0",
+			"testRotate4",
+			"testBoost6",
+			"testTogetherV2Massless",
+			"tMasslessBoost1",
+			"testTogetherV1Massless",
+			"testMasslessBoost1",
+			"testMasslessCOM",
+			"testMassless4V2",
+			"testMassless4V1",
+			"masslessEnergy",
+			"testRotate3",
+			"testBoost5",
+			"testTogether2COM",
+			"testTogether2V2",
+			"testTogether2V1",
+			"testRotate2",
+			"testBoost4",
+			"__i4",
+			"testTogetherCOM",
+			"testBoost3",
+			"x3",
+			"x2",
+			"x1",
+			"x0"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Templates/LHEF_ME_Template.lhe",
+					"settings":
+					{
+						"buffer_size": 795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								795,
+								795
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "MEs.py",
+					"settings":
+					{
+						"buffer_size": 13611,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "DSs.py",
+					"settings":
+					{
+						"buffer_size": 7264,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1047.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Tools/showers.py",
+					"settings":
+					{
+						"buffer_size": 10517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Tools/resultsContainers.py",
+					"settings":
+					{
+						"buffer_size": 13263,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Tools/LHEFHandlers.py",
+					"settings":
+					{
+						"buffer_size": 30593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20897,
+								20897
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5536.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Tools/chains.py",
+					"settings":
+					{
+						"buffer_size": 34398,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25280,
+								25280
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Tools/quarkPairs.py",
+					"settings":
+					{
+						"buffer_size": 22467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Tools/dipoles.py",
+					"settings":
+					{
+						"buffer_size": 17323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "Tools/sudakovs.py",
+					"settings":
+					{
+						"buffer_size": 28722,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9413,
+								9413
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Tools/kinematics.py",
+					"settings":
+					{
+						"buffer_size": 30649,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "Tools/lorentz.py",
+					"settings":
+					{
+						"buffer_size": 41382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "Tools/runningCouplings.py",
+					"settings":
+					{
+						"buffer_size": 36727,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								548,
+								548
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "Tools/particles.py",
+					"settings":
+					{
+						"buffer_size": 40212,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "Tools/fourVectors.py",
+					"settings":
+					{
+						"buffer_size": 22347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "Tools/particleData.py",
+					"settings":
+					{
+						"buffer_size": 20662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "Tools/dataLoggers.py",
+					"settings":
+					{
+						"buffer_size": 3457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								573,
+								573
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "Tools/counters.py",
+					"settings":
+					{
+						"buffer_size": 5425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								691,
+								691
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "Tools/precision.py",
+					"settings":
+					{
+						"buffer_size": 6679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "Tools/constants.py",
+					"settings":
+					{
+						"buffer_size": 13405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "Tools/assertions.py",
+					"settings":
+					{
+						"buffer_size": 8740,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								720,
+								720
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Users/Daniel/Documents/University/Level 4/Project/Code/Current/Tools/kinematics.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

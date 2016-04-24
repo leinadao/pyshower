@@ -1,0 +1,29 @@
+##~ PyShower 1.0 ~##
+------------------------------
+Modules In Hierarchical Order:
+------------------------------
+Control:
+-MEs.py
+-DSs.py
+Tools:
+-showers.py
+-resultsContainers.py
+-LHEFHandlers.py
+-chains.py
+-quarkPairs.py
+-dipoles.py
+-sudakovs.py
+-kinematics.py
+-lorentz.py
+-runningCouplings.py
+-particles.py
+-fourVectors.py
+-particleData.py
+-dataLoggers.py
+-counters.py
+-constants.py
+-precision.py
+-assertions.py
+----
+Other:
+-LHEF_ME_Template.lhe
