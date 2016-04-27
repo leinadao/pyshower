@@ -13,15 +13,14 @@ import precision
 import counters
 import particleData
 import kinematics
+import sudakovs
 import chains
 import showers
 import LHEFHandlers
 
 print "\n///////////////////"
 print "Loading DSs module:"
-print "No test code written!"
 print "///////////////////\n"
-assertions.pause_loading_module() #can move import lower when removed.
 
 ##Functions:##
 
@@ -106,7 +105,6 @@ class controller(object):
 			print str(__qPercent) + "% are " + __qName + "s."
 		print "This adds up to " + str(__sumPercent) + "%."
 		assertions.pause(__name__)
-		#Have 'movie' option later?
 
 ##Module running code:##
 if __name__ == "__main__":
@@ -150,11 +148,12 @@ if __name__ == "__main__":
 		x1s = kinematics.tX1s.output()
 		x3s = kinematics.tX3s.output()
 		pyplot.figure()
-		pyplot.title(r"$A\ plot\ of\ x_{3}\ as\ a\ function\ of\ x_{1}\ produced\ throughout$")
-		pyplot.xlabel(r"$x_{1}$")
-		pyplot.ylabel(r"$x_{3}$")
+		pyplot.xlabel(r"$x_{1}$",fontsize = 22)
+		pyplot.ylabel(r"$x_{3}$",fontsize = 22)
 		pyplot.xlim(-0.05,1.05)
 		pyplot.ylim(-0.05,1.05)
+		pyplot.xticks(fontsize = 15)
+		pyplot.yticks(fontsize = 15)
 		pyplot.scatter(x1s,x3s)
 		assertions.show_graph()
 
@@ -175,6 +174,11 @@ if __name__ == "__main__":
 	##Run##
 	theController = controller(__thePath,__activeQCodes)
 	theController.run()
+	__crossSecsGluSplit = sudakovs.crossSecsGluSplit.output()
+	__crossSecsGluProd = sudakovs.crossSecsGluProd.output()
+	__ratios = [__crossSecsGluSplit[i]/__crossSecsGluProd[i] for i,x in enumerate(__crossSecsGluProd)]
+	__averageRatio = sum(__ratios)/float(len(__ratios))
+	print "\nThe average ratio of the gluon splitting cross section to the gluon production cross section was:", __averageRatio, "\n"
 	plot_energy_ratios()
 	plot_xs()
 
