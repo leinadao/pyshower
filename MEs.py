@@ -23,9 +23,7 @@ import LHEFHandlers
 
 print "\n///////////////////"
 print "Loading MEs module:"
-print "Test code not written!"
 print "///////////////////\n"
-assertions.pause_loading_module()
 
 ##Set up counters:##
 quarkCounters = []
@@ -130,11 +128,10 @@ class qqBarMEGenerator(object):
 		"""A function to run the qqBar ME generator approximation."""
 		##Initialise writer
 		__writer = LHEFHandlers.LHEFMEWriter('qqBar',self.__numEvents,self.__S123,self.__quarkCodes)
-		__trials, __muf2, __mur2 = 1, self.__S123, self.__S123 ##Currently not used. Appeared to be S213?
-		__processID, __weight = 0, 1 ##Given by Krauss. I thought 3 might be un-weighted?
-		__scale, __alphaEM = 0.0,0.0 ##Krauss said to use; unsure about scale.
-		#was constants.cut_off_energy()*constants.cut_off_energy()
-		__alphaS = 0.0 ##Kraus said to use.
+		__trials, __muf2, __mur2 = 1, self.__S123, self.__S123
+		__processID, __weight = 0, 1
+		__scale, __alphaEM = 0.0,0.0
+		__alphaS = 0.0
 		##Generate and output events.
 		__i, __printEvery = 0, self.__numEvents/10
 		if __printEvery > 1000: ##Slow enough to want to see something is happening!
