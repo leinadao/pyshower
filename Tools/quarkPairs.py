@@ -17,9 +17,7 @@ import kinematics
 
 print "\n//////////////////////////"
 print "Loading quarkPairs module:"
-print "Test code not written!"
 print "//////////////////////////\n"
-assertions.pause(__name__) #Can remove import above lower when removed.
 
 ##Initiate coupling constants:##
 oneLoopAlphaEM = runningCouplings.oneLoopAlphaEM()
@@ -232,192 +230,192 @@ if __name__ == "__main__":
 	numberS123s = 1000
 	testS123s = [i*testS123/(numberS123s-1.0) for i in range(0,numberS123s)][1:] ##Remove 0 where undefined.
 
-	###Test calc_real_chi:##
-	#print "\n--------------------------------------------------\n"
-	#print "Testing calc_real_chi:\n"
-	#realChis = [calc_real_chi(anS123) for anS123 in testS123s]
-	#pyplot.figure()
-	#pyplot.title(r"$Re(\chi)\ as\ a\ function\ of\ S_{123}$")
-	#pyplot.xlabel(r"$S_{123} (GeV^{2}/c^{4})$")
-	#pyplot.ylabel(r"$Re(\chi(S_{123}))$")
-	#pyplot.plot(testS123s,realChis,linewidth = 2, label = r"$Re(\chi(S_{123}))$")
-	#pyplot.legend()
-	#assertions.show_graph()
-	#print "\nFinished testing calc_real_chi."
-	#assertions.pause(__name__)
-#
-	###Test calc_mod_squared_chi:##
-	#print "\n--------------------------------------------------\n"
-	#print "Testing calc_mod_squared_chi:\n"
-	#realChis = [calc_mod_squared_chi(anS123) for anS123 in testS123s]
-	#pyplot.figure()
-	#pyplot.title(r"$\|\chi\|^{2}\ as\ a\ function\ of\ S_{123}$")
-	#pyplot.xlabel(r"$S_{123} (GeV^{2}/c^{4})$")
-	#pyplot.ylabel(r"$\|\chi(S_{123})\|^{2}$")
-	#pyplot.plot(testS123s,realChis,linewidth = 2, label = r"$\|\chi(S_{123})\|^{2}$")
-	#pyplot.legend()
-	#assertions.show_graph()
-	#print "\nFinished testing calc_mod_squared_chi."
-	#assertions.pause(__name__)
-#
-	###Test prefactors in calc_f_for_cos_theta:##
-	#print "\n--------------------------------------------------\n"
-	#print "Testing prefactors in calc_f_for_cos_theta:\n"
-	#alphaEM = oneLoopAlphaEM.calculate
-	#electronCode = particleData.knownParticles.get_code_from_name('electron')
-	#cNWC = constants.neutral_weak_couplings
-	#for fCode in testQCodes:
-	#	gVE, gAE = cNWC('v',electronCode), cNWC('a',electronCode)
-	#	gVF, gAF = cNWC('v',fCode), cNWC('a',fCode)
-	#	prefactors = [(math.pi*alphaEM(anS123)*alphaEM(anS123))/(2.0*anS123) for anS123 in testS123s]
-	#	term1As = [(1.0 + (2.0*gVE*gVF*calc_real_chi(anS123))) for anS123 in testS123s]
-	#	term1Bs = [(((gVE*gVE) + (gAE*gAE))*((gVF*gVF) + (gAF*gAF))*calc_mod_squared_chi(anS123)) for anS123 in testS123s]
-	#	term1s = [(term1As[i] + term1Bs[i]) for i,anS123 in enumerate(testS123s)]
-	#	term2As = [(4.0*gAE*gAF*calc_real_chi(anS123)) for anS123 in testS123s]
-	#	term2Bs = [(8.0*gVE*gAE*gVF*gAF*calc_mod_squared_chi(anS123)) for anS123 in testS123s]
-	#	term2s = [(term2As[i] + term2Bs[i]) for i,anS123 in enumerate(testS123s)]
-	#	greaterThan = True
-	#	for i, x in enumerate(term1s):
-	#		if term2s[i] >= 2*term1s[i]:
-	#			greaterThan = False
-	#	if (greaterThan == True):
-	#		print "Using " + str(fCode) + "; 2*term1 > term2 for all!"
-	#	else:
-	#		print "g failed!"
-	#	pyplot.figure()
-	#	pyplot.title(r"$Prefactors(S_{123})\ in\ fermion\_cross\_section\_\rm{d}\theta\ for\ $" + testQNames[fCode-1] + r"$s$")
-	#	pyplot.xlabel(r"$S_{123} (GeV^{2}/c^{4})$")
-	#	pyplot.ylabel(r"$Prefactor(S_{123})$")
-	#	pyplot.plot(testS123s,prefactors,linewidth = 2, label = r"$Main\ prefactor$")
-	#	pyplot.plot(testS123s,term1s,linewidth = 2, label = r"$Prefactor\ 1$")
-	#	pyplot.plot(testS123s,term2s,linewidth = 2, label = r"$Prefactor\ 2$")
-	#	pyplot.legend()
-	#	assertions.show_graph()
-	#print "\nFinished testing prefactors in calc_f_for_cos_theta."
-	#assertions.pause(__name__)
-#
-	###Test terms in calc_f_for_cos_theta:##
-	#print "\n--------------------------------------------------\n"
-	#print "Testing terms in calc_f_for_cos_theta:\n"
-	#alphaEM = oneLoopAlphaEM.calculate
-	#electronCode = particleData.knownParticles.get_code_from_name('electron')
-	#cNWC = constants.neutral_weak_couplings
-	#for fCode in testQCodes:
-	#	gVE, gAE = cNWC('v',electronCode), cNWC('a',electronCode)
-	#	gVF, gAF = cNWC('v',fCode), cNWC('a',fCode)
-	#	prefactors = [(math.pi*alphaEM(testS123)*alphaEM(testS123))/(2.0*testS123) for aCosTheta in cosThetaRange]
-	#	term1As = [(1.0 + (2.0*gVE*gVF*calc_real_chi(testS123))) for aCosTheta in cosThetaRange]
-	#	term1Bs = [(((gVE*gVE) + (gAE*gAE))*((gVF*gVF) + (gAF*gAF))*calc_mod_squared_chi(testS123)) for aCosTheta in cosThetaRange]
-	#	term1s = [(term1As[i] + term1Bs[i])*(1.0 + aCosTheta*aCosTheta) for i,aCosTheta in enumerate(cosThetaRange)]
-	#	term2As = [(4.0*gAE*gAF*calc_real_chi(testS123)) for aCosTheta in cosThetaRange]
-	#	term2Bs = [(8.0*gVE*gAE*gVF*gAF*calc_mod_squared_chi(testS123)) for aCosTheta in cosThetaRange]
-	#	term2s = [(term2As[i] + term2Bs[i])*aCosTheta for i,aCosTheta in enumerate(cosThetaRange)]
-	#	differences = [((2*term1s[i]) - term2s[i]) for i,aCosTheta in enumerate(cosThetaRange)]
-	#	greaterThan = True
-	#	for i, x in enumerate(term1s):
-	#		if term1s[i] + term2s[i] >= 1.2*term1s[i]:
-	#			greaterThan = False
-	#	if (greaterThan == True):
-	#		print "Using " + str(fCode) + "; 1.2*term1 > term1 + term2 for all!"
-	#	else:
-	#		print "g failed!"
-	#	pyplot.figure()
-	#	pyplot.title(r"$Terms\ in\ fermion\_cross\_section\_\rm{d}\theta\ for\ $" + testQNames[fCode-1] + r"$s$")
-	#	pyplot.xlabel(r"$S_{123} (GeV^{2}/c^{4})$")
-	#	pyplot.ylabel(r"$Prefactor(S_{123})$")
-	#	pyplot.plot(cosThetaRange,prefactors,linewidth = 2, label = r"$Main\ prefactor$")
-	#	pyplot.plot(cosThetaRange,term1s,linewidth = 2, label = r"$Prefactor\ 1$")
-	#	pyplot.plot(cosThetaRange,term2s,linewidth = 2, label = r"$Prefactor\ 2$")
-	#	pyplot.plot(cosThetaRange,differences,linewidth = 2, label = r"$2\times(1)\ -\ (2)$")
-	#	pyplot.legend()
-	#	assertions.show_graph()
-	#print "\nFinished testing terms in calc_f_for_cos_theta."
-	#assertions.pause(__name__)
-#
-	###Test calc_f_for_cos_theta and calc_g_for_cos_theta:##
-	#print "\n--------------------------------------------------\n"
-	#print "Testing calc_f_for_cos_theta and calc_g_for_cos_theta:\n"
-	#cosThetafValues, cosThetagValues = [], []
-	##combine into one graph?
-	#for qCode in testQCodes:
-	#	cosThetafValues.append([calc_f_for_cos_theta(testS123,qCode,i) for i in cosThetaRange])
-	#	cosThetagValues.append([calc_g_for_cos_theta(testS123,qCode,i) for i in cosThetaRange])
-	#	##Don't want to normalise here as just looking at raw f and g.
-	#	greaterThan = True
-	#	for i, x in enumerate(cosThetafValues):
-	#		if cosThetafValues[i] >= cosThetagValues[i]:
-	#			greaterThan = False
-	#	if (greaterThan == True):
-	#		print "Using " + qCode + "; g > f for all!"
-	#	else:
-	#		print "g failed!"
-	#	pyplot.figure()
-	#	pyplot.title(r"$Comparing\ the\ functions\ f\ and\ g\ for\ $" + testQNames[qCode - 1] + r"$s$")
-	#	pyplot.xlabel(r"$\theta\ (rad)$")
-	#	pyplot.ylabel(r"$Normalised\ \sigma(\theta)$")
-	#	pyplot.ylim(0.0,0.000015)
-	#	pyplot.xlim(-1.1,1.1)
-	#	pyplot.axvline(-1, linestyle = '--', color = 'red')
-	#	pyplot.axvline(1, linestyle = '--', color = 'red')
-	#	pyplot.plot(cosThetaRange,cosThetafValues[qCode - 1],linewidth = 2, label = r"$f(cos\theta)$")
-	#	pyplot.plot(cosThetaRange,cosThetagValues[qCode - 1],linewidth = 2, label = r"$g(cos\theta)$")
-	#	pyplot.legend()
-	#	assertions.show_graph()
-	#print "\nFinished testing calc_f_for_cos_theta and calc_g_for_cos_theta."
-	#assertions.pause(__name__)
-#
-	###Test get_quarks_theta:##
-	#print "\n--------------------------------------------------\n"
-	#print "Testing get_quarks_theta:\n"
-	#cosThetaProbs = []
-	#allCosThetaHists, allCosThetaBins, allBinCentres = [], [], []
-	#cosThetasOut = []
-	#for qCode in testQCodes:
-	#	print "Using" + str(qCode[4:-1]) +":"
-	#	currentCosThetaProbs = [calc_f_for_cos_theta(testS123,qCode,aCosTheta) for aCosTheta in cosThetaRange]
-	#	thetaProbsSum = sum(currentCosThetaProbs)
-	#	cosThetaProbs.append([i/float(thetaProbsSum) for i in currentCosThetaProbs])
-	#	print "Normalised expected values sum to:", sum(cosThetaProbs[-1])
-	#	cosThetasOut.append([math.cos(get_quarks_theta(testS123,qCode)) for n in range(int(numTestIts))])
-	#	bins = numpy.linspace(-1.0,1.0,numberBins+1)
-	#	cosThetasHists, cosThetaBins = numpy.histogram(cosThetasOut[-1],bins)
-	#	##Normalise to 1. Have to divide by the number per bin for plotting the average.
-	#	allCosThetaHists.append([aNumberInBin/float(numTestIts*numberPerBin) for aNumberInBin in cosThetasHists])
-	#	print "Normalised generated values sum to:", sum(allCosThetaHists[-1])*numberPerBin ##As divided each by above.
-	#	allCosThetaBins.append(cosThetaBins)
-	#	allBinCentres.append([])
-	#	for i in range(len(allCosThetaBins[-1])-1): ##-1 for number of centres
-	#		allBinCentres[-1].append((allCosThetaBins[-1][i] + allCosThetaBins[-1][i+1])/2.0)
-	#xaxes = [r"$\rm{cos\ \theta}$",r"$\rm{cos\ \theta}$",r"$\rm{cos\ \theta}$",r"$\rm{cos\ \theta}$",r"$\rm{cos\ \theta}$",r"$\rm{cos\ \theta}$"]
-	#yaxes = [r"$\rm{P}(\rm{cos\ \theta})$",r"$\rm{P}(\rm{cos\ \theta})$",r"$\rm{P}(\rm{cos\ \theta})$",r"$\rm{P}(\rm{cos\ \theta})$"]
-	#yaxes += [r"$\rm{P}(\rm{cos\ \theta})$",r"$\rm{P}(\rm{cos\ \theta})$"]
-	#yMaxs = [0.0025,0.0025,0.0025,0.0025,0.0025,0.0025]
-	#supTitle = r"$\rm{Monte\ Carlo\ sampling\ of\ cos\ \theta\ for}\ e^{+}e^{-}\ \rightarrow\ q\bar{q}\ \rm{using\ "
-	#supTitle += str(int(numTestIts)) + r"\ iterations}$"
-	#figure,axes = pyplot.subplots(3,2)
-	#axes = axes.ravel()
-	#for idx,ax in enumerate(axes):
-	#	ax.plot(allBinCentres[idx], allCosThetaHists[idx], linestyle = "solid", color = "blue", linewidth = 2)
-	#	ax.plot(cosThetaRange, cosThetaProbs[idx], linestyle = "solid", color = "red", linewidth = 2)
-	#	ax.set_title(testQNames[idx])
-	#	ax.set_xlabel(xaxes[idx])
-	#	ax.set_ylabel(yaxes[idx])
-	#	ax.axis([-1,1,0,yMaxs[idx]])
-	#	ax.set_yticks([0.0,0.001,0.002,0.003],minor=False)
-	#	ax.yaxis.set_major_formatter(mtick.FixedFormatter([r"$0.0$",r"$1.0$",r"$2.0$",r"$\times\ 10^{-3}$"]))
-	#	ax.set_xticks([-1.0,-0.5,0.0,0.5,1.0],minor=False)
-	#	ax.xaxis.set_major_formatter(mtick.FixedFormatter([r"$\minus1.0$",r"$\minus0.5$",r"$0.0$",r"$0.5$",r"$1.0$"]))
-	#pyplot.suptitle(supTitle,fontsize = "16")
-	#line1 = pyplot.Line2D((0,1),(0,0), color="blue", linewidth = 2)
-	#line2 = pyplot.Line2D((0,1),(0,0), color="red", linewidth = 2)
-	#lines, figStrs = [line1,line2], [r"$\rm{Generated}$",r"$\rm{Expected}$"]
-	#figure.legend(lines, figStrs, bbox_to_anchor=[0.5, 0.05],loc='center', ncol=2)
-	#pyplot.tight_layout()
-	###Space main title out to prevent overlapping and allow space for legend below:
-	#pyplot.subplots_adjust(top=0.85,bottom=0.17)
-	#assertions.show_graph()
-	#print "\nFinished testing get_quarks_theta."
-	#assertions.pause(__name__)
+	##Test calc_real_chi:##
+	print "\n--------------------------------------------------\n"
+	print "Testing calc_real_chi:\n"
+	realChis = [calc_real_chi(anS123) for anS123 in testS123s]
+	pyplot.figure()
+	pyplot.title(r"$Re(\chi)\ as\ a\ function\ of\ S_{123}$")
+	pyplot.xlabel(r"$S_{123} (GeV^{2}/c^{4})$")
+	pyplot.ylabel(r"$Re(\chi(S_{123}))$")
+	pyplot.plot(testS123s,realChis,linewidth = 2, label = r"$Re(\chi(S_{123}))$")
+	pyplot.legend()
+	assertions.show_graph()
+	print "\nFinished testing calc_real_chi."
+	assertions.pause(__name__)
+
+	##Test calc_mod_squared_chi:##
+	print "\n--------------------------------------------------\n"
+	print "Testing calc_mod_squared_chi:\n"
+	realChis = [calc_mod_squared_chi(anS123) for anS123 in testS123s]
+	pyplot.figure()
+	pyplot.title(r"$\|\chi\|^{2}\ as\ a\ function\ of\ S_{123}$")
+	pyplot.xlabel(r"$S_{123} (GeV^{2}/c^{4})$")
+	pyplot.ylabel(r"$\|\chi(S_{123})\|^{2}$")
+	pyplot.plot(testS123s,realChis,linewidth = 2, label = r"$\|\chi(S_{123})\|^{2}$")
+	pyplot.legend()
+	assertions.show_graph()
+	print "\nFinished testing calc_mod_squared_chi."
+	assertions.pause(__name__)
+
+	##Test prefactors in calc_f_for_cos_theta:##
+	print "\n--------------------------------------------------\n"
+	print "Testing prefactors in calc_f_for_cos_theta:\n"
+	alphaEM = oneLoopAlphaEM.calculate
+	electronCode = particleData.knownParticles.get_code_from_name('electron')
+	cNWC = constants.neutral_weak_couplings
+	for fCode in testQCodes:
+		gVE, gAE = cNWC('v',electronCode), cNWC('a',electronCode)
+		gVF, gAF = cNWC('v',fCode), cNWC('a',fCode)
+		prefactors = [(math.pi*alphaEM(anS123)*alphaEM(anS123))/(2.0*anS123) for anS123 in testS123s]
+		term1As = [(1.0 + (2.0*gVE*gVF*calc_real_chi(anS123))) for anS123 in testS123s]
+		term1Bs = [(((gVE*gVE) + (gAE*gAE))*((gVF*gVF) + (gAF*gAF))*calc_mod_squared_chi(anS123)) for anS123 in testS123s]
+		term1s = [(term1As[i] + term1Bs[i]) for i,anS123 in enumerate(testS123s)]
+		term2As = [(4.0*gAE*gAF*calc_real_chi(anS123)) for anS123 in testS123s]
+		term2Bs = [(8.0*gVE*gAE*gVF*gAF*calc_mod_squared_chi(anS123)) for anS123 in testS123s]
+		term2s = [(term2As[i] + term2Bs[i]) for i,anS123 in enumerate(testS123s)]
+		greaterThan = True
+		for i, x in enumerate(term1s):
+			if term2s[i] >= 2*term1s[i]:
+				greaterThan = False
+		if (greaterThan == True):
+			print "Using " + str(fCode) + "; 2*term1 > term2 for all!"
+		else:
+			print "g failed!"
+		pyplot.figure()
+		pyplot.title(r"$Prefactors(S_{123})\ in\ fermion\_cross\_section\_\rm{d}\theta\ for\ $" + testQNames[fCode-1] + r"$s$")
+		pyplot.xlabel(r"$S_{123} (GeV^{2}/c^{4})$")
+		pyplot.ylabel(r"$Prefactor(S_{123})$")
+		pyplot.plot(testS123s,prefactors,linewidth = 2, label = r"$Main\ prefactor$")
+		pyplot.plot(testS123s,term1s,linewidth = 2, label = r"$Prefactor\ 1$")
+		pyplot.plot(testS123s,term2s,linewidth = 2, label = r"$Prefactor\ 2$")
+		pyplot.legend()
+		assertions.show_graph()
+	print "\nFinished testing prefactors in calc_f_for_cos_theta."
+	assertions.pause(__name__)
+
+	##Test terms in calc_f_for_cos_theta:##
+	print "\n--------------------------------------------------\n"
+	print "Testing terms in calc_f_for_cos_theta:\n"
+	alphaEM = oneLoopAlphaEM.calculate
+	electronCode = particleData.knownParticles.get_code_from_name('electron')
+	cNWC = constants.neutral_weak_couplings
+	for fCode in testQCodes:
+		gVE, gAE = cNWC('v',electronCode), cNWC('a',electronCode)
+		gVF, gAF = cNWC('v',fCode), cNWC('a',fCode)
+		prefactors = [(math.pi*alphaEM(testS123)*alphaEM(testS123))/(2.0*testS123) for aCosTheta in cosThetaRange]
+		term1As = [(1.0 + (2.0*gVE*gVF*calc_real_chi(testS123))) for aCosTheta in cosThetaRange]
+		term1Bs = [(((gVE*gVE) + (gAE*gAE))*((gVF*gVF) + (gAF*gAF))*calc_mod_squared_chi(testS123)) for aCosTheta in cosThetaRange]
+		term1s = [(term1As[i] + term1Bs[i])*(1.0 + aCosTheta*aCosTheta) for i,aCosTheta in enumerate(cosThetaRange)]
+		term2As = [(4.0*gAE*gAF*calc_real_chi(testS123)) for aCosTheta in cosThetaRange]
+		term2Bs = [(8.0*gVE*gAE*gVF*gAF*calc_mod_squared_chi(testS123)) for aCosTheta in cosThetaRange]
+		term2s = [(term2As[i] + term2Bs[i])*aCosTheta for i,aCosTheta in enumerate(cosThetaRange)]
+		differences = [((2*term1s[i]) - term2s[i]) for i,aCosTheta in enumerate(cosThetaRange)]
+		greaterThan = True
+		for i, x in enumerate(term1s):
+			if term1s[i] + term2s[i] >= 1.2*term1s[i]:
+				greaterThan = False
+		if (greaterThan == True):
+			print "Using " + str(fCode) + "; 1.2*term1 > term1 + term2 for all!"
+		else:
+			print "g failed!"
+		pyplot.figure()
+		pyplot.title(r"$Terms\ in\ fermion\_cross\_section\_\rm{d}\theta\ for\ $" + testQNames[fCode-1] + r"$s$")
+		pyplot.xlabel(r"$S_{123} (GeV^{2}/c^{4})$")
+		pyplot.ylabel(r"$Prefactor(S_{123})$")
+		pyplot.plot(cosThetaRange,prefactors,linewidth = 2, label = r"$Main\ prefactor$")
+		pyplot.plot(cosThetaRange,term1s,linewidth = 2, label = r"$Prefactor\ 1$")
+		pyplot.plot(cosThetaRange,term2s,linewidth = 2, label = r"$Prefactor\ 2$")
+		pyplot.plot(cosThetaRange,differences,linewidth = 2, label = r"$2\times(1)\ -\ (2)$")
+		pyplot.legend()
+		assertions.show_graph()
+	print "\nFinished testing terms in calc_f_for_cos_theta."
+	assertions.pause(__name__)
+
+	##Test calc_f_for_cos_theta and calc_g_for_cos_theta:##
+	print "\n--------------------------------------------------\n"
+	print "Testing calc_f_for_cos_theta and calc_g_for_cos_theta:\n"
+	cosThetafValues, cosThetagValues = [], []
+	#combine into one graph?
+	for qCode in testQCodes:
+		cosThetafValues.append([calc_f_for_cos_theta(testS123,qCode,i) for i in cosThetaRange])
+		cosThetagValues.append([calc_g_for_cos_theta(testS123,qCode,i) for i in cosThetaRange])
+		##Don't want to normalise here as just looking at raw f and g.
+		greaterThan = True
+		for i, x in enumerate(cosThetafValues):
+			if cosThetafValues[i] >= cosThetagValues[i]:
+				greaterThan = False
+		if (greaterThan == True):
+			print "Using " + qCode + "; g > f for all!"
+		else:
+			print "g failed!"
+		pyplot.figure()
+		pyplot.title(r"$Comparing\ the\ functions\ f\ and\ g\ for\ $" + testQNames[qCode - 1] + r"$s$")
+		pyplot.xlabel(r"$\theta\ (rad)$")
+		pyplot.ylabel(r"$Normalised\ \sigma(\theta)$")
+		pyplot.ylim(0.0,0.000015)
+		pyplot.xlim(-1.1,1.1)
+		pyplot.axvline(-1, linestyle = '--', color = 'red')
+		pyplot.axvline(1, linestyle = '--', color = 'red')
+		pyplot.plot(cosThetaRange,cosThetafValues[qCode - 1],linewidth = 2, label = r"$f(cos\theta)$")
+		pyplot.plot(cosThetaRange,cosThetagValues[qCode - 1],linewidth = 2, label = r"$g(cos\theta)$")
+		pyplot.legend()
+		assertions.show_graph()
+	print "\nFinished testing calc_f_for_cos_theta and calc_g_for_cos_theta."
+	assertions.pause(__name__)
+
+	##Test get_quarks_theta:##
+	print "\n--------------------------------------------------\n"
+	print "Testing get_quarks_theta:\n"
+	cosThetaProbs = []
+	allCosThetaHists, allCosThetaBins, allBinCentres = [], [], []
+	cosThetasOut = []
+	for qCode in testQCodes:
+		print "Using" + str(qCode[4:-1]) +":"
+		currentCosThetaProbs = [calc_f_for_cos_theta(testS123,qCode,aCosTheta) for aCosTheta in cosThetaRange]
+		thetaProbsSum = sum(currentCosThetaProbs)
+		cosThetaProbs.append([i/float(thetaProbsSum) for i in currentCosThetaProbs])
+		print "Normalised expected values sum to:", sum(cosThetaProbs[-1])
+		cosThetasOut.append([math.cos(get_quarks_theta(testS123,qCode)) for n in range(int(numTestIts))])
+		bins = numpy.linspace(-1.0,1.0,numberBins+1)
+		cosThetasHists, cosThetaBins = numpy.histogram(cosThetasOut[-1],bins)
+		##Normalise to 1. Have to divide by the number per bin for plotting the average.
+		allCosThetaHists.append([aNumberInBin/float(numTestIts*numberPerBin) for aNumberInBin in cosThetasHists])
+		print "Normalised generated values sum to:", sum(allCosThetaHists[-1])*numberPerBin ##As divided each by above.
+		allCosThetaBins.append(cosThetaBins)
+		allBinCentres.append([])
+		for i in range(len(allCosThetaBins[-1])-1): ##-1 for number of centres
+			allBinCentres[-1].append((allCosThetaBins[-1][i] + allCosThetaBins[-1][i+1])/2.0)
+	xaxes = [r"$\rm{cos\ \theta}$",r"$\rm{cos\ \theta}$",r"$\rm{cos\ \theta}$",r"$\rm{cos\ \theta}$",r"$\rm{cos\ \theta}$",r"$\rm{cos\ \theta}$"]
+	yaxes = [r"$\rm{P}(\rm{cos\ \theta})$",r"$\rm{P}(\rm{cos\ \theta})$",r"$\rm{P}(\rm{cos\ \theta})$",r"$\rm{P}(\rm{cos\ \theta})$"]
+	yaxes += [r"$\rm{P}(\rm{cos\ \theta})$",r"$\rm{P}(\rm{cos\ \theta})$"]
+	yMaxs = [0.0025,0.0025,0.0025,0.0025,0.0025,0.0025]
+	supTitle = r"$\rm{Monte\ Carlo\ sampling\ of\ cos\ \theta\ for}\ e^{+}e^{-}\ \rightarrow\ q\bar{q}\ \rm{using\ "
+	supTitle += str(int(numTestIts)) + r"\ iterations}$"
+	figure,axes = pyplot.subplots(3,2)
+	axes = axes.ravel()
+	for idx,ax in enumerate(axes):
+		ax.plot(allBinCentres[idx], allCosThetaHists[idx], linestyle = "solid", color = "blue", linewidth = 2)
+		ax.plot(cosThetaRange, cosThetaProbs[idx], linestyle = "solid", color = "red", linewidth = 2)
+		ax.set_title(testQNames[idx])
+		ax.set_xlabel(xaxes[idx])
+		ax.set_ylabel(yaxes[idx])
+		ax.axis([-1,1,0,yMaxs[idx]])
+		ax.set_yticks([0.0,0.001,0.002,0.003],minor=False)
+		ax.yaxis.set_major_formatter(mtick.FixedFormatter([r"$0.0$",r"$1.0$",r"$2.0$",r"$\times\ 10^{-3}$"]))
+		ax.set_xticks([-1.0,-0.5,0.0,0.5,1.0],minor=False)
+		ax.xaxis.set_major_formatter(mtick.FixedFormatter([r"$\minus1.0$",r"$\minus0.5$",r"$0.0$",r"$0.5$",r"$1.0$"]))
+	pyplot.suptitle(supTitle,fontsize = "16")
+	line1 = pyplot.Line2D((0,1),(0,0), color="blue", linewidth = 2)
+	line2 = pyplot.Line2D((0,1),(0,0), color="red", linewidth = 2)
+	lines, figStrs = [line1,line2], [r"$\rm{Generated}$",r"$\rm{Expected}$"]
+	figure.legend(lines, figStrs, bbox_to_anchor=[0.5, 0.05],loc='center', ncol=2)
+	pyplot.tight_layout()
+	##Space main title out to prevent overlapping and allow space for legend below:
+	pyplot.subplots_adjust(top=0.85,bottom=0.17)
+	assertions.show_graph()
+	print "\nFinished testing get_quarks_theta."
+	assertions.pause(__name__)
 
 	##Test get_quark_weights and get_quark_code:##
 	print "\n--------------------------------------------------\n"

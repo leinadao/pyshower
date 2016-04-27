@@ -13,19 +13,22 @@ import math
 import assertions
 import precision
 import constants
+import dataLoggers
 import particleData
 import runningCouplings
 import kinematics
 
 print "\n///////////////////////"
 print "Loading sudakov module:"
-print "Test code not re-written!"
 print "///////////////////////\n"
-assertions.pause_loading_module()
 
 ##Initiate coupling constants:##
 alphaS = runningCouplings.oneLoopAlphaS()
 alphaEM = runningCouplings.oneLoopAlphaEM()
+
+##Initialise data loggers:##
+crossSecsGluSplit = dataLoggers.dataLogger()
+crossSecsGluProd = dataLoggers.dataLogger()
 
 ##Functions:##
 
@@ -178,7 +181,7 @@ def calc_inv_G2(valueIn):
 
 ##~~Top Functions~~##
 
-def solve_sudakovs(PperpSquaredMax,S123,difCrossSecIds,code1,code2):
+def solve_sudakovs(PperpSquaredMax,S123,difCrossSecIds,code1,code2,logCrosSecs = None):
 	"""A function to generate a PperpSquared and y for an emission or splitting, using the Sudakov form factor."""
 	##Codes 1,2 still needed to get the charges for EM radiation.
 	##Using veto algorithm in "PYTHIA 6.0 Physics and Manual".
@@ -235,6 +238,9 @@ def solve_sudakovs(PperpSquaredMax,S123,difCrossSecIds,code1,code2):
 	__sumSoFar = 0.0
 	__chosenId = None
 	__chosen = False
+	if (logCrosSecs == 1):
+		crossSecsGluSplit.store(qg_to_qQQBar_cS(S123,__PperpSquaredi,__yi))
+		crossSecsGluProd.store(qg_to_qgg_cS(S123,__PperpSquaredi,__yi))
 	for __difCrossSecId in difCrossSecIds:
 		if (not __chosen):
 			__sumSoFar += __idWeights[__difCrossSecId]
@@ -271,7 +277,7 @@ def solve_case_group_1(PperpSquaredMax,S123,code1,code2):
 	__difCrossSecIds = [1] ##Gluon emission always possible.
 	if assertions.gluon_splitting_on():
 		__difCrossSecIds.append(3) ##Gluon splitting possible.
-	__PperpSquared, __y, __difCrossSecId = solve_sudakovs(PperpSquaredMax,S123,__difCrossSecIds,code1,code2)
+	__PperpSquared, __y, __difCrossSecId = solve_sudakovs(PperpSquaredMax,S123,__difCrossSecIds,code1,code2,1)
 	__convertIdToProcessCode = {None:0,0:1,1:1,2:1,3:2,4:2,5:2}
 	return __PperpSquared, __y, __convertIdToProcessCode[__difCrossSecId]
 
@@ -333,241 +339,8 @@ if __name__ == "__main__":
 	import numpy
 	import matplotlib.pyplot as pyplot
 
-#	##Define test functions:##
-#	def calc_test_qqBar_int_func(PperpSquared,S123):
-#		"""A function to return a value for the function in the Pperp^2 test integral, for qqBar."""
-#		assert assertions.all_are_numbers([PperpSquared,S123])
-#		alphaSNow = alphaS.calculate(PperpSquared)
-#		term1 = (2.0*alphaSNow)/(3.0*math.pi*PperpSquared)
-#		term2 = (2.0*math.log(S123/PperpSquared)) - 3.0 + ((4.0*PperpSquared)/S123) - ((PperpSquared*PperpSquared)/(S123*S123))
-#		return term1*term2
-#
-#	def calc_test_qqBar_probs(S123,numtestIts):
-#		"""A function to calculate the test probabilities as a function of Pperp^2, for qqBar."""
-#		assert assertions.all_are_numbers([S123,numtestIts])
-#		intCutOff = constants.cut_off_energy()*constants.cut_off_energy()
-#		topLimit = S123 ##PperpSquaredMax = S123 for first dipole emission.
-#		testValues = numpy.linspace(topLimit,intCutOff,numtestIts+1) ##+1 to actually get that number of testIts.
-#		results, tempResult1, tempResult2 = [0], 0.0, 0.0
-#		h = testValues[0] - testValues[1]
-#		for i in range(numtestIts):
-#			tempResult2 = tempResult1 + 0.5*h*(calc_test_qqBar_int_func(testValues[i+1],S123) + calc_test_qqBar_int_func(testValues[i],S123))
-#			results.append(1.0 - math.exp((-1.0)*tempResult2))
-#			tempResult1 = tempResult2
-#		return results
-#
-#	def calc_test_qg_int_func(PperpSquared,S123):
-#		"""A function to return a value for the function in the Pperp^2 test integral, for qg."""
-#		assert assertions.all_are_numbers([PperpSquared,S123])
-#		alphaSNow = alphaS.calculate(PperpSquared)
-#		term1 = (3.0*alphaSNow)/(4.0*math.pi*PperpSquared)
-#		part1 = (2.0*math.log(S123/PperpSquared)) + ((5.0*PperpSquared)/S123) - ((2.0*PperpSquared*PperpSquared)/(S123*S123))
-#		part2 = (PperpSquared*PperpSquared*PperpSquared/(3.0*S123*S123*S123)) - (10.0/3.0)
-#		term2 = part1 + part2
-#		return term1*term2
-#
-#	def calc_test_qg_probs(S123,numtestIts):
-#		"""A function to calculate the test probabilities as a function of Pperp^2, for qg."""
-#		assert assertions.all_are_numbers([S123,numtestIts])
-#		intCutOff = constants.cut_off_energy()*constants.cut_off_energy()
-#		topLimit = S123 ##PperpSquaredMax = S123 for first dipole emission.
-#		testValues = numpy.linspace(topLimit,intCutOff,numtestIts+1) ##+1 to actually get that number of testIts.
-#		results, tempResult1, tempResult2 = [0], 0.0, 0.0
-#		h = testValues[0] - testValues[1]
-#		for i in range(numtestIts):
-#			tempResult2 = tempResult1 + 0.5*h*(calc_test_qg_int_func(testValues[i+1],S123) + calc_test_qg_int_func(testValues[i],S123))
-#			results.append(1.0 - math.exp((-1.0)*tempResult2))
-#			tempResult1 = tempResult2
-#		return results
-#
-#	def calc_test_gg_int_func(PperpSquared,S123):
-#		"""A function to return a value for the function in the Pperp^2 test integral, for gg."""
-#		assert assertions.all_are_numbers([PperpSquared,S123])
-#		alphaSNow = alphaS.calculate(PperpSquared)
-#		term1 = (3.0*alphaSNow)/(4.0*math.pi*PperpSquared)
-#		part1 = (2.0*math.log(S123/PperpSquared)) + ((6.0*PperpSquared)/S123) - ((3.0*PperpSquared*PperpSquared)/(S123*S123))
-#		part2 = (2.0*PperpSquared*PperpSquared*PperpSquared/(3.0*S123*S123*S123)) - (11.0/3.0)
-#		term2 = part1 + part2
-#		return term1*term2
-#
-#	def calc_test_gg_probs(S123,numtestIts):
-#		"""A function to calculate the test probabilities as a function of Pperp^2, for gg."""
-#		assert assertions.all_are_numbers([S123,numtestIts])
-#		intCutOff = constants.cut_off_energy()*constants.cut_off_energy()
-#		topLimit = S123 ##PperpSquaredMax = S123 for first dipole emission.
-#		testValues = numpy.linspace(topLimit,intCutOff,numtestIts+1) ##+1 to actually get that number of testIts.
-#		results, tempResult1, tempResult2 = [0], 0.0, 0.0
-#		h = testValues[0] - testValues[1]
-#		for i in range(numtestIts):
-#			tempResult2 = tempResult1 + 0.5*h*(calc_test_gg_int_func(testValues[i+1],S123) + calc_test_gg_int_func(testValues[i],S123))
-#			results.append(1.0 - math.exp((-1.0)*tempResult2))
-#			tempResult1 = tempResult2
-#		return results
-#
-#	##Begin testing:##
-#	print "\n----------------------------------------------------------------------"
-#	print "----------------------------------------------------------------------\n"
-#	print "///////////////////////"
-#	print "Testing sudakov module:"
-#	print "///////////////////////"
-#	assertions.pause(__name__)
-#	
-#	###Setup here:##
-#	##Both the three test probs and allPperpsSquared run from larger Pperpsquared to smaller.
-#	print "\nGenerating test values..."
-#	##Generate splitting results.##
-#	cutOff = constants.cut_off_energy()*constants.cut_off_energy()
-#	testS123 = 63.0
-#	testY = 0.756425
-#	qqBarPperpSquareds, qqBarYs = [], []
-#	qgPperpSquareds, qgYs = [], []
-#	ggPperpSquareds, ggYs = [], []
-#	testIts = 100000.0
-#	numberBins = 100
-#	for n in range(int(testIts)):
-#		var1, var2 = solve_for_qqBar(testS123,testS123)
-#		qqBarPperpSquareds.append(var1)
-#		qqBarYs.append(var2)
-#		var3, var4 = solve_for_qg(testS123,testS123)
-#		qgPperpSquareds.append(var3)
-#		qgYs.append(var4)
-#		var5, var6 = solve_for_gg(testS123,testS123)
-#		ggPperpSquareds.append(var5)
-#		ggYs.append(var6)
-#	qqBarFellBelow = qqBarPperpSquareds.count(None)
-#	qqBarPperpSquareds = [x for x in qqBarPperpSquareds if x is not None]
-#	qgFellBelow = qgPperpSquareds.count(None)
-#	qgPperpSquareds = [x for x in qgPperpSquareds if x is not None]
-#	ggFellBelow = ggPperpSquareds.count(None)
-#	ggPperpSquareds = [x for x in ggPperpSquareds if x is not None]
-#	bins = numpy.linspace(cutOff,testS123,numberBins+1)
-#	qqBarPperpSquaredsHist, qqBarBins = numpy.histogram(qqBarPperpSquareds,bins)
-#	qgPperpSquaredsHist, qgBins = numpy.histogram(qgPperpSquareds,bins)
-#	ggPperpSquaredsHist, ggBins = numpy.histogram(ggPperpSquareds,bins)
-#	qqBarPperpSquareds2, qgPperpSquareds2, ggPperpSquareds2 = [], [], []
-#	for i in range(numberBins):
-#		qqBarPperpSquareds2.insert(0,sum(qqBarPperpSquaredsHist[-(i+1):])/testIts) ##Use insert at 0 to keep the reverse ordering.
-#		qgPperpSquareds2.insert(0,sum(qgPperpSquaredsHist[-(i+1):])/testIts)
-#		ggPperpSquareds2.insert(0,sum(ggPperpSquaredsHist[-(i+1):])/testIts)
-#	allGenerated = [qqBarPperpSquareds2,qgPperpSquareds2,ggPperpSquareds2]
-#	allBins = [qqBarBins[:-1],qgBins[:-1],ggBins[:-1]] ##As allGenerated has the number created up to the end of the bin.
-#	print "\nqqBar probability is", qqBarPperpSquareds2[0]
-#	print "Adding the", qqBarFellBelow, "that fell below the cutoff gives a final probability of", qqBarPperpSquareds2[0] + (qqBarFellBelow/testIts)
-#	if precision.check_numbers_equal(qqBarPperpSquareds2[0] + (qqBarFellBelow/testIts),1.0):
-#		print "Test completed successfully!"
-#	else:
-#		print "Not consistent, test failed!"
-#	print "\nqg probability is", qgPperpSquareds2[0]
-#	print "Adding the", qgFellBelow, "that fell below the cutoff gives a final probability of", qgPperpSquareds2[0] + (qgFellBelow/testIts)
-#	if precision.check_numbers_equal(qgPperpSquareds2[0] + (qgFellBelow/testIts),1.0):
-#		print "Test completed successfully!"
-#	else:
-#		print "Not consistent, test failed!"
-#	print "\ngg probability is", ggPperpSquareds2[0]
-#	print "Adding the", ggFellBelow, "that fell below the cutoff gives a final probability of", ggPperpSquareds2[0] + (ggFellBelow/testIts)
-#	if precision.check_numbers_equal(ggPperpSquareds2[0] + (ggFellBelow/testIts),1.0):
-#		print "Test completed successfully!"
-#	else:
-#		print "Not consistent, test failed!"
-#	assertions.pause(__name__)
-#	##Generate prob functions.##
-#	##Using testIts from above as the number of integration slices.
-#	allPperpsSquared = numpy.linspace(testS123,cutOff,testIts+1) ##+1 to actually get that number of testIts.
-#	qqBarProbs, qgProbs = calc_test_qqBar_probs(testS123,int(testIts)), calc_test_qg_probs(testS123,int(testIts))
-#	ggProbs = calc_test_gg_probs(testS123,int(testIts))
-#	##Don't forget the test values are the probability of a decay by a value, not at that given value.
-#	qqBarProbsMax, qgProbsMax, ggProbsMax = qqBarProbs[-1], qgProbs[-1], ggProbs[-1]
-#	allProbs = [qqBarProbs,qgProbs,ggProbs]
-#	testParticleCodes = [[1,-1],[2,-2],[3,-3],[4,-4],[5,-5],[6,-6],[-1,1],[-2,2],[-3,3],[-4,4],[-5,5],[-6,6],[21,21]]
-#	testParticleCodes += [[1,21],[2,21],[3,21],[4,21],[5,21],[6,21],[-1,21],[-2,21],[-3,21],[-4,21],[-5,21],[-6,21]]
-#	testParticleCodes += [[21,1],[21,2],[21,3],[21,4],[21,5],[21,6],[21,-1],[21,-2],[21,-3],[21,-4],[21,-5],[21,-6]]
-#
-#	##Test completeness. i.e all split or fall below:##
-#	print "\n--------------------------------------------------\n"
-#	print "Testing completeness. i.e all split or fall below:\n"
-#	print "\nFor qqBar,", qqBarFellBelow, "fell below the cutoff energy."
-#	print len(qqBarPperpSquareds), "successfully split."
-#	if ((testIts - len(qqBarPperpSquareds)) == qqBarFellBelow):
-#		print "Consistent, test completed successfully!"
-#	else:
-#		print "Not consistent, test failed!"
-#	print "\nFor qg,", qgFellBelow, "fell below the cutoff energy."
-#	print len(qgPperpSquareds), "successfully split."
-#	if ((testIts - len(qgPperpSquareds)) == qgFellBelow):
-#		print "Consistent, test completed successfully!"
-#	else:
-#		print "Not consistent, test failed!"
-#	print "\nFor gg,", ggFellBelow, "fell below the cutoff energy."
-#	print len(ggPperpSquareds), "successfully split."
-#	if ((testIts - len(ggPperpSquareds)) == ggFellBelow):
-#		print "Consistent, test completed successfully!"
-#	else:
-#		print "Not consistent, test failed!"
-#	print "\nFinished testing completeness. i.e all split or fall below."
-#	assertions.pause(__name__)
-#
-#	##Test individual sudakovs:##
-#	print "\n--------------------------------------------------\n"
-#	print "Testing individual sudakovs:\n"
-#	xaxes = [r"$P_{\perp}^{2}$",r"$P_{\perp}^{2}$",r"$P_{\perp}^{2}$"]
-#	yaxes = [r"P(split by $P_{\perp}^{2}$)",r"P(split by $P_{\perp}^{2}$)",r"P(split by $P_{\perp}^{2}$)"]
-#	titles = ['qqBar','qg','gg']
-#	figure,axes = pyplot.subplots(2,2)
-#	axes = axes.ravel()
-#	for idx,ax in enumerate(axes):
-#		if (idx == 3):
-#			continue
-#		#ax.hist(histData[idx], numberBins, weights = histWeights[idx], alpha = 0.5) #normed = 1
-#		ax.plot(allBins[idx], allGenerated[idx], linestyle = "solid", color = "blue", linewidth = 2)
-#		ax.plot(allPperpsSquared, allProbs[idx], linestyle = "solid", color = "red", linewidth = 2)
-#		ax.set_title(titles[idx])
-#		ax.set_xlabel(xaxes[idx])
-#		ax.set_ylabel(yaxes[idx])
-#		ax.axvline(cutOff, linestyle = '--', color = 'red')
-#	pyplot.suptitle(r"Generated probabilities of a split by $P_{\perp}^{2}$ vs expected values for:" + str(int(testIts)) + " iterations")
-#	line1 = pyplot.Line2D((0,1),(0,0), color="blue", linewidth = 2)
-#	line2 = pyplot.Line2D((0,1),(0,0), color="red", linewidth = 2)
-#	pyplot.figlegend([line1,line2],["Generated","Expected"],"lower right")
-#	figure.delaxes(axes[3]) ##Remove blank fourth subplot.
-#	pyplot.tight_layout()
-#	pyplot.subplots_adjust(top=0.85) #Space main title out to prevent overlapping.
-#	assertions.show_graph()
-#	print "\nFinished testing individual sudakovs."
-#	assertions.pause(__name__)
-#
-#	##Test solve_g_emission and solve:##
-#	print "\n--------------------------------------------------\n"
-#	print "Testing solve_g_emission and solve:\n"
-#	get_name = particleData.knownParticles.get_name_from_code
-#	print "Using S123 and PperpSquaredMax =", testS123
-#	counter = 0
-#	for testCodes in testParticleCodes:
-#		counter += 1
-#		print "\nCalling solve_g_emission with", get_name(testCodes[0]), "and", get_name(testCodes[1]), "gives:"
-#		print solve_g_emission(testS123,testS123,testCodes[0],testCodes[1])
-#		print "Calling solve with", get_name(testCodes[0]), "and", get_name(testCodes[1]), "gives:"
-#		print solve(testS123,testS123,testCodes[0],testCodes[1])
-#		print "--------------------"
-#		if (counter%2 == 0):
-#			assertions.pause(__name__)
-#	print "\nFinished testing solve_g_emission and solve."
-#	assertions.pause(__name__)
-#
-#	##Test calc_G2 and calc_inv_G2:##
-#	print "\n--------------------------------------------------\n"
-#	print "Testing calc_G2 and calc_inv_G2:\n"
-#	print "Calling calc_G2 with:", testY
-#	print "returns:", calc_G2(testY)
-#	print "Calling calc_inv_G2 with :", calc_G2(testY)
-#	print "returns:", calc_inv_G2(calc_G2(testY))
-#	if (calc_inv_G2(calc_G2(testY)) == testY):
-#		print "Test successful!"
-#	else:
-#		print "Test failed!"
-#	print "\nFinished testing calc_G2 and calc_inv_G2."
-#	assertions.pause(__name__)
-#
-#	##All other functions tested implicitly in the above tests.
+	##Module re-written so old tests removed.##
+	print "Module re-written so old tests removed."
 
 	##Done testing:##
 	print "\n---------------------------------------------\n"

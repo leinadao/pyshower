@@ -16,11 +16,7 @@ import resultsContainers
 
 print "\n///////////////////////"
 print "Loading showers module:"
-print "ggg shower not written!"
-print "No test code written!"
-print "Add history!"
 print "///////////////////////\n"
-assertions.pause_loading_module() #can move import lower when removed here.
 
 ##Functions:##
 
@@ -54,43 +50,19 @@ class qqBarShower(object):
 		self.__isRun = False
 		self.__showerList = [chains.chain([self.__startParticle1,self.__startParticle2])]
 		self.__photonList = []
-		#self.__showerHistory = []
+		self.__showerHistory = []
 
 	def get_start_dipole():
 		"""A function to return the dipole a shower began from."""
 		return self.__startDipole
 
-#	def get_history():
-#		"""A function to return the history of a particle."""
-#		return self.__showerHistory
+	def get_history():
+		"""A function to return the history of a particle."""
+		return self.__showerHistory
 
 	def is_run(self):
 		"""A function to determine whether the shower has been run."""
 		return self.__isRun
-
-#	def __str__(self):
-#		"""A function to return a string of a particle object."""
-		#if not run, just starrting details
-		#if run, nested for loops required -> similar to chains.
-#		return ("[" + self.get_name() + " | " + str(self.__fourMomentum) + " ]")
-
-#	def simple_str(self):
-#		"""A function to return a simplified string of a resultsContainer object."""
-		#if not run, just starrting details
-		#if run, nested for loops required -> similar to chains.
-#		if (len(self.__containerList) == 0):
-#			return "[RC-[!EMPTY!]-]"
-#		__simpleStringOfRC = "[RC-"
-#		for dipole in self.__containerList:
-#			__simpleStringOfRC += dipole.simple_str()
-#		__simpleStringOfRC += "]"
-#		return __simpleStringOfRC
-
-#	def __repr__(self):
-#		"""A function to return a representation of a particle object."""
-		#if not run, just starrting details
-		#if run, nested for loops required -> similar to chains.
-#		return ("<particle([" + self.get_name() + " | " + repr(self.__fourMomentum) + " ])>")
 
 	def codes_produced(self):
 		"""A function to return the codes of all resulting particles."""

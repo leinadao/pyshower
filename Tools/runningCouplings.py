@@ -100,7 +100,7 @@ class oneLoopAlphaS(object):
 
 	def calculate(self,QSquared):
 		"""A function for calculating the one-loop strong coupling constant at a given COM energy squared."""
-		##Source: 'Quantum Chromodynamics', Dissertori Group, Lpthe Group, P Salam, p3.
+		##Source: 'Determination of the QCD coupling alphaS'.
 		assert assertions.all_are_numbers([QSquared])
 		__QSquared = assertions.force_float_number(QSquared)
 		__Nf= Nf(__QSquared)
@@ -682,11 +682,13 @@ if __name__ == "__main__":
 	pyplot.axvline(tCutOffEnergySquared, linestyle = '--', color = 'red')
 	pyplot.ylim([0.0,1.2])
 	pyplot.xlim([0.7,tQSquaredRange[-1]])
-	pyplot.text(tCutOffEnergySquared,0.6, r"$\rm{Shower\ cut-off}$",rotation=90, fontsize = 14)
-	pyplot.title(r"$\rm{One\ Loop\ Weighted\ \alpha_{s}}$",fontsize = 18)
-	pyplot.xlabel(r"$\rm{\log(Q^{2})}$",fontsize = 16)
-	pyplot.ylabel(r"$\rm{\alpha_{s}(Q^{2})/\alpha_{s}(Q_{max}^{2})}$",fontsize = 16)
+	pyplot.text(tCutOffEnergySquared,0.6, r"$\rm{Shower\ cut-off}$",rotation=90, fontsize = 18)
+	#pyplot.title(r"$\rm{One\ Loop\ Weighted\ \alpha_{s}}$",fontsize = 24)
+	pyplot.xlabel(r"$\rm{\log(Q^{2})}$",fontsize = 22)
+	pyplot.ylabel(r"$\rm{\alpha_{s}(Q^{2})/\alpha_{s}(Q_{max}^{2})}$",fontsize = 22)
 	pyplot.xscale('log')
+	pyplot.xticks(fontsize = 15)
+	pyplot.yticks(fontsize = 15)
 	assertions.show_graph()
 	print "\nFinished Generating alphaS report graph."
 	assertions.pause(__name__)

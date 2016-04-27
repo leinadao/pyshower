@@ -21,10 +21,7 @@ import quarkPairs
 
 print "\n//////////////////////"
 print "Loading chains module:"
-print "g splitting not written for loops."
-print "Test code not written!"
 print "//////////////////////\n"
-assertions.pause_loading_module()
 
 ##Set up data loggers:
 producedQuarkCodes = dataLoggers.dataLogger()

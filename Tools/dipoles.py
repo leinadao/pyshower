@@ -13,7 +13,6 @@ import particles
 
 print "\n///////////////////////"
 print "Loading dipoles module:"
-print "Test code not written yet!"
 print "///////////////////////\n"
 
 ##Functions:##
