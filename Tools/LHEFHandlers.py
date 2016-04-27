@@ -16,6 +16,7 @@ import datetime
 import assertions
 import precision
 import constants
+import dataLoggers
 import particleData
 import fourVectors
 import particles
@@ -23,10 +24,7 @@ import kinematics
 
 print "\n////////////////////////////"
 print "Loading LHEFHandlers module:"
-print "Test code not written yet!"
-print "Init values not coded in yet!"
 print "////////////////////////////\n"
-assertions.pause_loading_module() #can move import lower when removed here.
 
 ##Functions:##
 
@@ -76,7 +74,7 @@ class LHEFReader(object):
 	def get_all_as_string(self):
 		"""A function to return the whole LHEF XML file as a string."""
 		with open(self.__toRead, 'r') as fileToRead:
-			__theString = fileToRead.read() #.replace('\n', '')
+			__theString = fileToRead.read()
 		return __theString
 
 	def get_number_events(self):
@@ -244,6 +242,7 @@ class LHEFShowerWriter(object):
 		self.__numberEventsSaved = 0
 		self.__haveEvents = False ##To track if at least one has been added.
 		self.__topWritten = False
+		self.__numProdLogger = dataLoggers.dataLogger()
 
 	def write_top(self):
 		"""A function to update the sections of a LHEF file above the events."""
@@ -264,6 +263,7 @@ class LHEFShowerWriter(object):
 		assert ((type(scale) == float) or (isinstance(scale, basestring)))
 		assert ((type(alphaEM) == float) or (isinstance(alphaEM, basestring)))
 		assert ((type(alphaS) == float) or (isinstance(alphaS, basestring)))
+		self.__numProdLogger.store(len(particlesOut) - 2) ##Log number of produced partons per event.
 		if (self.__topWritten == False):
 			self.write_top()
 			self.__haveEvents = True ##Only called once here.
@@ -341,6 +341,9 @@ class LHEFShowerWriter(object):
 		__file = open(self.__saveName,'a') ##'a' means append to.
 		__file.write(__toSave)
 		__file.close()
+		__totalNumProd = sum(self.__numProdLogger.output())
+		__averageNumProd = __totalNumProd / self.__numberEvents
+		print "\nThe average number of partons produced was:", __averageNumProd
 		print "\n////////////////////////////////////////////////////////////////////"
 		print "Saved as:", self.__saveName
 		print "////////////////////////////////////////////////////////////////////\n"
@@ -595,17 +598,7 @@ if __name__ == "__main__":
 	print "///////////////////////////////"
 	assertions.pause(__name__)
 
-#	##Test __str__(), simple_str() and __repr__() functions:##
-#	print "\n--------------------------------------------------\n"
-#	print "Testing __str__(), simple_str() and __repr__() functions:\n"
-#	print "Calling in order on the three test results containers used above returns:"
-#	for testRC in testRCs:
-#		print "\n", str(testRC)
-#		print "\n", testRC.simple_str()
-#		print "\n", repr(testRC)
-#		assertions.pause(__name__)
-#	print "\nFinished testing __str__(), simple_str() and __repr__() functions."
-#	assertions.pause(__name__)
+	##Tested through use so far.##
 
 	##Done testing:##
 	print "\n---------------------------------------------\n"
